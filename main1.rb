@@ -11,12 +11,12 @@ puts 'enter N:'
 n = gets.to_i
 
 measures = {'day' => -> (date) {return date.next_day },
-			'week' => -> (date) {return date + 7},
-			'month' => -> (date) {return date.next_month},
-			'year' => -> (date) {return date.next_year}
+            'week' => -> (date) {return date + 7},
+            'month' => -> (date) {return date.next_month},
+            'year' => -> (date) {return date.next_year}
 }
 
 n.times do 
-	date = measures[measure].call(date) 
-	puts date
+    date = measures[measure].call(date)     
+    puts date
 end

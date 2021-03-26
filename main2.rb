@@ -1,10 +1,10 @@
 class Hash
   def safe_invert
     dict = Hash.new
-    each do |key,value|      
+    each do |key,value|   
       if !dict[value]   
         dict[value] = []
-      end 
+      end
       dict[value] << key
     end
     dict
@@ -18,5 +18,5 @@ fruits =  {
 } 
 
 invert_fruits = fruits.safe_invert
-p invert_fruits['Marocco'] 
-p invert_fruits['Ecuador'] 
+
+p invert_fruits
